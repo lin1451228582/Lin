@@ -1,0 +1,37 @@
+package transfer;
+
+public class transferpyramid {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int j = 10;//j为金字塔高度
+        System.out.println("-------------金字塔------------");
+        print1(j);
+        System.out.println("-------------倒金字塔-----------");
+        print2(j);
+    }
+    public static void print1(int e) {
+        for (int f = 1; f <= e; f++) {
+            for (int g = 6+e - f; g > 0; g--) {
+                System.out.print(" ");
+            }//此处6为调整间距所设，可随意更改
+            for (int g = 1; g <= 2 * f - 1; g++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void print2(int e) {
+
+        for (int f = e; f > 0; f--) {
+            for (int g = 0; g < 6+e - f; g++) {
+                System.out.print(" ");
+            }
+            for (int g = 1; g <= 2 * f - 1; g++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
